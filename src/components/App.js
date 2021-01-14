@@ -1,9 +1,12 @@
 import React from 'react';
+import Display from './Display';
+import ButtonPanel from './ButtonPanel';
 
-function App(props) {
+export default function App() {
   return (
-    <React.fragment>
-      
-    </React.fragment>
+    <>
+      <Display />
+      <ButtonPanel />
+    </>
   );
 }
