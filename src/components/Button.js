@@ -7,5 +7,9 @@ export default function Button({ name, col }) {
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
-  col: PropTypes.number.isRequired,
+  col: PropTypes.number,
+};
+
+Button.defaultProps = {
+  col: 1,
 };
