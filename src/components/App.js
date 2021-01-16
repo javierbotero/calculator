@@ -14,14 +14,14 @@ export default class App extends Component {
       // eslint-disable-next-line react/no-unused-state
       operation: null,
       // eslint-disable-next-line react/no-unused-state
-      firstResult: true,
+      computed: false,
     };
 
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(ButtonName) {
-    this.setState(state => calculate(state, ButtonName));
+  handleClick(buttonName) {
+    this.setState(state => calculate(state, buttonName));
   }
 
   render() {
@@ -29,7 +29,7 @@ export default class App extends Component {
     console.log(total);
     return (
       <>
-        <Display result={total} />
+        <Display result={this.state} />
         <ButtonPanel myHandler={this.handleClick} />
       </>
     );
