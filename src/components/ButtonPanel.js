@@ -16,7 +16,7 @@ export default function ButtonPanel(props) {
         <Button name="7" myHandler={myHandler} />
         <Button name="8" myHandler={myHandler} />
         <Button name="9" myHandler={myHandler} />
-        <Button name="X" myHandler={myHandler} />
+        <Button name="x" myHandler={myHandler} />
       </tr>
       <tr>
         <Button name="4" myHandler={myHandler} />
