@@ -7,7 +7,6 @@ export default function operate(numberOne, numberTwo, operation) {
     case '/':
       return first.div(second);
     case 'x':
-      console.log('----multiplication');
       return first.times(second);
     case '+':
       return first.plus(second);
