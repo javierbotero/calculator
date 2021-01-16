@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Display({ result }) {
-  return <div>{result}</div>;
+  return <div>{result === null ? 0 : result}</div>;
 }
 
 Display.defaultProps = {

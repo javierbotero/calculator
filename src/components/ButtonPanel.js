@@ -1,38 +1,44 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-export default function ButtonPanel() {
+export default function ButtonPanel(props) {
+  const { myHandler } = props;
   return (
     <table>
       <tr>
-        <Button name="AC" col={1} />
-        <Button name="+/-" col={1} />
-        <Button name="%" col={1} />
-        <Button name="/" col={1} />
+        <Button name="AC" myHandler={myHandler} />
+        <Button name="+/-" myHandler={myHandler} />
+        <Button name="%" myHandler={myHandler} />
+        <Button name="/" myHandler={myHandler} />
       </tr>
       <tr>
-        <Button name="7" />
-        <Button name="8" />
-        <Button name="9" />
-        <Button name="X" />
+        <Button name="7" myHandler={myHandler} />
+        <Button name="8" myHandler={myHandler} />
+        <Button name="9" myHandler={myHandler} />
+        <Button name="X" myHandler={myHandler} />
       </tr>
       <tr>
-        <Button name="4" />
-        <Button name="5" />
-        <Button name="6" />
-        <Button name="-" />
+        <Button name="4" myHandler={myHandler} />
+        <Button name="5" myHandler={myHandler} />
+        <Button name="6" myHandler={myHandler} />
+        <Button name="-" myHandler={myHandler} />
       </tr>
       <tr>
-        <Button name="1" />
-        <Button name="2" />
-        <Button name="3" />
-        <Button name="+" />
+        <Button name="1" myHandler={myHandler} />
+        <Button name="2" myHandler={myHandler} />
+        <Button name="3" myHandler={myHandler} />
+        <Button name="+" myHandler={myHandler} />
       </tr>
       <tr>
-        <Button name="0" col={2} />
-        <Button name="." />
-        <Button name="=" />
+        <Button name="0" col={2} myHandler={myHandler} />
+        <Button name="." myHandler={myHandler} />
+        <Button name="=" myHandler={myHandler} />
       </tr>
     </table>
   );
 }
+
+ButtonPanel.propTypes = {
+  myHandler: PropTypes.func.isRequired,
+};
