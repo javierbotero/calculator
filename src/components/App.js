@@ -8,6 +8,7 @@ export default class App extends Component {
     super(props);
 
     this.state = {
+      // eslint-disable-next-line react/no-unused-state
       total: null,
       // eslint-disable-next-line react/no-unused-state
       next: null,
@@ -25,8 +26,6 @@ export default class App extends Component {
   }
 
   render() {
-    const { total } = this.state;
-    console.log(total);
     return (
       <>
         <Display result={this.state} />
