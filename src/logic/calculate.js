@@ -2,7 +2,7 @@ import operate from './operate';
 
 export default function calculate(data, buttonName) {
   let result = data;
-  if ((result.total === null || result.computed || result.total === '0') && !['+', 'x', '/', '%', '=', 'AC', '+/-'].includes(buttonName) && result.operation === null) {
+  if ((result.total === null || result.computed || result.total === '0') && !['+', '-', 'x', '/', '%', '=', 'AC', '+/-'].includes(buttonName) && result.operation === null) {
     result.total = buttonName;
     result.computed = false;
     result.operation = null;
@@ -17,8 +17,8 @@ export default function calculate(data, buttonName) {
   } else if (result.total && result.operation && result.next && !['+', '-', 'x', '/', '%', '=', 'AC', '+/-'].includes(buttonName)) {
     result.next += buttonName;
   } else if (buttonName === '+/-') {
-    result.total *= -1;
-    result.next *= -1;
+    if (result.total) { result.total *= -1; }
+    if (result.next) { result.next *= -1; }
   } else if (['+', '-', 'x', '/', '%', '='].includes(buttonName) && result.total && result.next && result.operation) {
     result.total = operate(result.total, result.next, result.operation).toString();
     result.next = null;
