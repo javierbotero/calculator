@@ -10,14 +10,10 @@ export default function Display({ result }) {
  ${result.operation ? result.operation : ''}
  ${result.next ? result.next : ''}`;
   }
-  console.log(result);
   return <div>{str}</div>;
 }
 
-Display.defaultProps = {
-  result: '0',
-};
-
 Display.propTypes = {
-  result: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
+  result: PropTypes.object.isRequired,
 };
