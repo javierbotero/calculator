@@ -14,7 +14,7 @@
   width: 60%;
   margin: 0 auto;
   margin-top: 10%;
-  font-family:'Roboto-Light', serif;
+  font-family: 'Roboto-Light', serif;
 }
 
 table {
@@ -25,6 +25,7 @@ table {
 th {
   width: 25%;
   padding: 0;
+  background-color: #e1e1e1;
 }
 
 .zero {
@@ -46,14 +47,11 @@ tr {
   color: white;
 }
 
-th {
-  background-color: #e1e1e1;
+th,
+.display {
+  border: 1px solid #c2c2c2;
 }
 
 th:last-child {
   background-color: #f5933d;
-}
-
-th, .display {
-  border: 1px solid #c2c2c2;
 }
