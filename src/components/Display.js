@@ -10,7 +10,7 @@ export default function Display({ result }) {
  ${result.operation ? result.operation : ''}
  ${result.next ? result.next : ''}`;
   }
-  return <div>{str}</div>;
+  return <div className="display">{str}</div>;
 }
 
 Display.propTypes = {

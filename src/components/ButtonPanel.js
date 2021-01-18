@@ -31,7 +31,7 @@ export default function ButtonPanel(props) {
         <Button name="+" myHandler={myHandler} />
       </tr>
       <tr>
-        <Button name="0" col={2} myHandler={myHandler} />
+        <Button name="0" myClass="zero" col={2} myHandler={myHandler} />
         <Button name="." myHandler={myHandler} />
         <Button name="=" myHandler={myHandler} />
       </tr>
