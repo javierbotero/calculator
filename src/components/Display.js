@@ -2,13 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Display({ result }) {
-  return <div>{result}</div>;
+  let str;
+  if (result.total === null) {
+    str = '0';
+  } else {
+    str = `${result.total}
+ ${result.operation ? result.operation : ''}
+ ${result.next ? result.next : ''}`;
+  }
+  return <div className="display">{str}</div>;
 }
 
-Display.defaultProps = {
-  result: '0',
-};
-
 Display.propTypes = {
-  result: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
+  result: PropTypes.object.isRequired,
 };

@@ -7,20 +7,29 @@ export default class App extends Component {
   constructor(props) {
     super(props);
 
-    this.myState = {
+    this.state = {
+      // eslint-disable-next-line react/no-unused-state
       total: null,
+      // eslint-disable-next-line react/no-unused-state
       next: null,
+      // eslint-disable-next-line react/no-unused-state
       operation: null,
-      firstResult: true,
+      // eslint-disable-next-line react/no-unused-state
+      computed: false,
     };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(buttonName) {
+    this.setState(state => calculate(state, buttonName));
   }
 
   render() {
-    calculate(this.myState, '1');
     return (
       <>
-        <Display result="0" />
-        <ButtonPanel />
+        <Display result={this.state} />
+        <ButtonPanel myHandler={this.handleClick} />
       </>
     );
   }
