@@ -14,7 +14,7 @@ export default function App() {
   const [myState, setMyState] = useState(firstState);
 
   const handleClick = buttonName => {
-    setMyState(myState => calculate(myState, buttonName));
+    setMyState(calculate(myState, buttonName));
   };
 
   return (

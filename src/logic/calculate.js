@@ -36,5 +36,5 @@ export default function calculate(data, buttonName) {
       computed: true,
     };
   }
-  return result;
+  return { ...result };
 }
