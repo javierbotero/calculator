@@ -19,8 +19,10 @@ export default function App() {
 
   return (
     <>
-      <Display result={myState} />
-      <ButtonPanel myHandler={handleClick} />
+      <div className="parent">
+        <Display result={myState} />
+        <ButtonPanel myHandler={handleClick} />
+      </div>
     </>
   );
 }

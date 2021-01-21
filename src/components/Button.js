@@ -1,24 +1,33 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Button({
-  name, col, myHandler, myClass,
+  name, myClass, myHandler, color, wide,
 }) {
   return (
-    <th colSpan={col} onClick={() => myHandler(name)} className={myClass}>
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+    <div
+      className={`${myClass} ${color}`}
+      onClick={() => myHandler(name)}
+      style={{
+        backgroundColor: color,
+        flexBasis: wide ? '50%' : '25%',
+      }}
+    >
       {name}
-    </th>
+    </div>
   );
 }
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
-  col: PropTypes.number,
   myHandler: PropTypes.func.isRequired,
-  myClass: PropTypes.string,
+  myClass: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  wide: PropTypes.bool.isRequired,
 };
 
 Button.defaultProps = {
-  col: 1,
-  myClass: '',
+  color: '#f5933d',
 };

@@ -10,31 +10,30 @@
   src: local('Roboto-Light'), url(./fonts/Roboto-Light.ttf) format('truetype');
 }
 
-#root {
-  width: 60%;
+* {
+  box-sizing: border-box;
+}
+
+.parent {
+  width: 700px;
   margin: 0 auto;
   margin-top: 10%;
   font-family: 'Roboto-Light', serif;
 }
 
-table {
-  width: 100%;
+.container {
   border-spacing: 0;
+  display: flex;
+  flex-flow: row wrap;
 }
 
-th {
-  width: 25%;
+.key {
   padding: 0;
-  background-color: #e1e1e1;
-}
-
-.zero {
-  width: 50%;
-}
-
-tr {
   height: 4em;
   background-color: #868795;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .display {
@@ -43,15 +42,17 @@ tr {
   flex-direction: row-reverse;
   font-size: 2em;
   background-color: #868795;
-  height: 2em;
+  height: 100px;
   color: white;
 }
 
-th,
+.key,
 .display {
   border: 1px solid #c2c2c2;
 }
 
-th:last-child {
+
+
+.orange {
   background-color: #f5933d;
 }
