@@ -27,9 +27,6 @@ li {
   display: inline-block;
   background-color: #f5933d;
   flex: 1 1 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 li:hover {
@@ -40,6 +37,11 @@ a {
   text-decoration: none;
   color: #f3f2f2;
   font-size: 1em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .routes-container {
