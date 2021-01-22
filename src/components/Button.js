@@ -12,7 +12,7 @@ export default function Button({
       onClick={() => myHandler(name)}
       style={{
         backgroundColor: color,
-        flexBasis: wide ? '50%' : '25%',
+        flexBasis: wide === 'true' ? '50%' : '25%',
       }}
     >
       {name}
@@ -25,9 +25,10 @@ Button.propTypes = {
   myHandler: PropTypes.func.isRequired,
   myClass: PropTypes.string.isRequired,
   color: PropTypes.string,
-  wide: PropTypes.bool.isRequired,
+  wide: PropTypes.string,
 };
 
 Button.defaultProps = {
   color: '#f5933d',
+  wide: 'false',
 };

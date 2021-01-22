@@ -22,7 +22,7 @@ export default function ButtonPanel(props) {
       <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="2" myHandler={myHandler} />
       <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="3" myHandler={myHandler} />
       <Button myClass="key keyWidthGeneral" name="+" myHandler={myHandler} />
-      <Button myClass="key keyWidthSpecial" color="#e1e1e1" name="0" wide myHandler={myHandler} />
+      <Button myClass="key keyWidthSpecial" color="#e1e1e1" name="0" wide="true" myHandler={myHandler} />
       <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="." myHandler={myHandler} />
       <Button myClass="key keyWidthGeneral" name="=" myHandler={myHandler} />
     </div>
