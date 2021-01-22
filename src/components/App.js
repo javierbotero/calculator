@@ -19,6 +19,7 @@ export default function App() {
 
   return (
     <>
+      <h3>Let&apos;s do some math!</h3>
       <div className="parent">
         <Display result={myState} />
         <ButtonPanel myHandler={handleClick} />
