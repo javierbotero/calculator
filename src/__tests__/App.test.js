@@ -1,8 +1,6 @@
 import React from 'react';
-import { rest } from 'msw';
-import { setupServer } from 'msw/node';
 import {
-  render, fireEvent, waitFor, screen, getByText
+  render, fireEvent, screen,
 } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import App from '../components/App';
@@ -31,7 +29,7 @@ describe('Testing App', () => {
     const display = document.querySelector('.display');
     expect(display).toHaveTextContent('180');
   });
-  
+
   it('Checks that display shows 0 if AC is pressed after some buttons are pressed', () => {
     render(<App />);
     fireEvent.click(screen.getByText('8'));
