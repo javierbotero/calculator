@@ -3,6 +3,7 @@ import {
   render, fireEvent, screen,
 } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import renderer from 'react-test-renderer';
 import App from '../components/App';
 
 describe('Testing App', () => {
@@ -38,5 +39,12 @@ describe('Testing App', () => {
     expect(display).toHaveTextContent('87');
     fireEvent.click(screen.getByText('AC'));
     expect(display).toHaveTextContent('0');
+  });
+
+  it('Makes sure App is the same with the snapshot', () => {
+    const tree = renderer
+      .create(<App />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

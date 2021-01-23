@@ -2,6 +2,7 @@ import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import '@testing-library/jest-dom';
+import renderer from 'react-test-renderer';
 import Button from '../components/Button';
 
 describe('Testing Button', () => {
@@ -22,5 +23,12 @@ describe('Testing Button', () => {
     render(<Button name="x" myHandler={handler} myClass="class" color="orange" wide="true" />);
     const button = screen.getByText('x');
     expect(button).toHaveClass('orange');
+  });
+
+  it('Make sure the render is the same with the snapshot', () => {
+    const tree = renderer
+      .create(<Button name="AC" myHandler={handler} myClass="class" color="orange" wide="false" />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
