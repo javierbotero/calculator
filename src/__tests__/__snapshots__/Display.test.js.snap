@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests Display Checks the component match with th snapshot 1`] = `
+<div
+  className="display"
+>
+  0
+</div>
+`;
