@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import renderer from 'react-test-renderer';
 import Display from '../components/Display';
@@ -35,7 +35,7 @@ describe('Tests Display', () => {
     };
     const tree = renderer
       .create(<Display result={object} />)
-      .toJSON()
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
