@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Button Make sure the render is the same with the snapshot 1`] = `
+<div
+  className="class orange"
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "orange",
+      "flexBasis": "25%",
+    }
+  }
+>
+  AC
+</div>
+`;

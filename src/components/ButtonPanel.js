@@ -5,37 +5,27 @@ import Button from './Button';
 export default function ButtonPanel(props) {
   const { myHandler } = props;
   return (
-    <table>
-      <tr>
-        <Button name="AC" myHandler={myHandler} />
-        <Button name="+/-" myHandler={myHandler} />
-        <Button name="%" myHandler={myHandler} />
-        <Button name="/" myHandler={myHandler} />
-      </tr>
-      <tr>
-        <Button name="7" myHandler={myHandler} />
-        <Button name="8" myHandler={myHandler} />
-        <Button name="9" myHandler={myHandler} />
-        <Button name="x" myHandler={myHandler} />
-      </tr>
-      <tr>
-        <Button name="4" myHandler={myHandler} />
-        <Button name="5" myHandler={myHandler} />
-        <Button name="6" myHandler={myHandler} />
-        <Button name="-" myHandler={myHandler} />
-      </tr>
-      <tr>
-        <Button name="1" myHandler={myHandler} />
-        <Button name="2" myHandler={myHandler} />
-        <Button name="3" myHandler={myHandler} />
-        <Button name="+" myHandler={myHandler} />
-      </tr>
-      <tr>
-        <Button name="0" myClass="zero" col={2} myHandler={myHandler} />
-        <Button name="." myHandler={myHandler} />
-        <Button name="=" myHandler={myHandler} />
-      </tr>
-    </table>
+    <div className="container">
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="AC" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="+/-" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="%" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" name="/" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="7" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="8" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="9" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" name="x" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="4" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="5" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="6" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" name="-" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="1" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="2" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="3" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" name="+" myHandler={myHandler} />
+      <Button myClass="key keyWidthSpecial" color="#e1e1e1" name="0" wide="true" myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" color="#e1e1e1" name="." myHandler={myHandler} />
+      <Button myClass="key keyWidthGeneral" name="=" myHandler={myHandler} />
+    </div>
   );
 }
 

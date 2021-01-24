@@ -10,31 +10,64 @@
   src: local('Roboto-Light'), url(./fonts/Roboto-Light.ttf) format('truetype');
 }
 
-#root {
-  width: 60%;
-  margin: 0 auto;
-  margin-top: 10%;
+* {
+  box-sizing: border-box;
   font-family: 'Roboto-Light', serif;
 }
 
-table {
-  width: 100%;
-  border-spacing: 0;
-}
-
-th {
-  width: 25%;
-  padding: 0;
-  background-color: #e1e1e1;
-}
-
-.zero {
+ul {
+  list-style-type: none;
   width: 50%;
+  height: 3em;
+  display: flex;
+  margin: 0 auto;
 }
 
-tr {
+li {
+  display: inline-block;
+  background-color: #f5933d;
+  flex: 1 1 auto;
+}
+
+li:hover {
+  background-color: #868795;
+}
+
+a {
+  text-decoration: none;
+  color: #f3f2f2;
+  font-size: 1em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.routes-container {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.parent {
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+
+.container {
+  border-spacing: 0;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.key {
+  padding: 0;
   height: 4em;
   background-color: #868795;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .display {
@@ -43,15 +76,33 @@ tr {
   flex-direction: row-reverse;
   font-size: 2em;
   background-color: #868795;
-  height: 2em;
+  height: 100px;
   color: white;
 }
 
-th,
+.key,
 .display {
   border: 1px solid #c2c2c2;
 }
 
-th:last-child {
+.orange {
   background-color: #f5933d;
+}
+
+.quote,
+.home {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  flex-direction: column;
+}
+
+@media (min-width: 800px) {
+  .routes-container {
+    width: 80%;
+  }
 }
