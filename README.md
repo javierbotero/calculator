@@ -34,8 +34,11 @@ in the terminal to install the dependencies.
   npm start
 ```
 And you will have the calculator in your local environment.
-
-
+6. Run
+```
+  npm test
+```
+For running coverage tests.
 ## Authors
 
 👤 **Javier Botero**
